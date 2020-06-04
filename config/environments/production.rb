@@ -96,10 +96,10 @@ Rails.application.configure do
   }
 
   # Exception notification configuration
-  Rails.application.config.middleware.use ExceptionNotification::Rack,
-                                          email: {
-                                              email_prefix: "[GoTrack #{Rails.env.upcase}] ",
-                                              sender_address: 'no-reply@quantumiot.com',
-                                              exception_recipients: ENV['EXCEPTION_NOTIFIER_RECIPIENTS'] ? ENV['EXCEPTION_NOTIFIER_RECIPIENTS'].split(' ') : %w{support@quantumiot.com}
-                                          }
+  # Rails.application.config.middleware.use ExceptionNotification::Rack,
+  #                                         email: {
+  #                                             email_prefix: "[GoTrack #{Rails.env.upcase}] ",
+  #                                             sender_address: 'no-reply@quantumiot.com',
+  #                                             exception_recipients: ENV['EXCEPTION_NOTIFIER_RECIPIENTS'] ? ENV['EXCEPTION_NOTIFIER_RECIPIENTS'].split(' ') : %w{support@quantumiot.com}
+  #                                         }
 end
