@@ -97,7 +97,7 @@ class Device < ActiveRecord::Base
 
   def self.load_seeds
     if Device.where(name: 'Seed Device').empty?
-      Device.create!(name: 'Seed Device', imei: '12345', provision_status_id: ProvisionStatus::STATUS_ACTIVE, account_id: Account.find_by_company('RSC').id)
+      Device.create!(name: 'Seed Device', imei: '12345', provision_status_id: ProvisionStatus::STATUS_ACTIVE, account_id: Account.find_by_company('RSC').id, thing_token: 'device_1234')
     end
   end
 
