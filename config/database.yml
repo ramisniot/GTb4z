@@ -18,6 +18,10 @@ development:
 test:
   <<: *default
   database: gotrack_test  
+
+production:
+  <<: *default
+  database: gotrack_pro 
   
 # development:
 #   adapter: postgresql
