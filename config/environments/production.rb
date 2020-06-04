@@ -97,11 +97,11 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:        'smtp.gmail.com',
+    address:        'smtp.office365.com',
     port:           587,
     username:       ENV['SMTP_USERNAME'],
     password:       ENV['SMTP_PASSWORD'],
-    domain:         'heroku.com',
+    domain:         ENV['SMTP_DOMAIN'],
     authentication: :plain
   }
   config.action_mailer.default_url_options = {
