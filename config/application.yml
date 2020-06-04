@@ -53,17 +53,17 @@ development:
 #   RABBITMQ_PASSWORD_MESSAGES_CHANNEL: 'messages_mqtt' 
 
 production:
-  # SMTP_DOMAIN: 'heroku.com'
-  # SMTP_HOST: 'smtp.gmail.com' 
-  # SMTP_PASSWORD: 'ramibe36' 
-  # SMTP_PORT: '587' 
-  # SMTP_USERNAME: 'rameshkror'
-
-  SMTP_DOMAIN: 'byteforza.com'
-  SMTP_HOST: 'smtp.office365.com' 
-  SMTP_PASSWORD: 'Ramibe$26' 
+  SMTP_DOMAIN: 'heroku.com'
+  SMTP_HOST: 'smtp.gmail.com' 
+  SMTP_PASSWORD: 'ramibe36' 
   SMTP_PORT: '587' 
-  SMTP_USERNAME: 'ramesh.k@byteforza.com'
+  SMTP_USERNAME: 'rameshkror'
+
+  # SMTP_DOMAIN: 'byteforza.com'
+  # SMTP_HOST: 'smtp.office365.com' 
+  # SMTP_PASSWORD: 'Ramibe$26' 
+  # SMTP_PORT: '587' 
+  # SMTP_USERNAME: 'ramesh.k@byteforza.com'
 
 # dev:
 #   CLOUDAMQP_URL: ''
