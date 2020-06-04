@@ -1,0 +1,13 @@
+---
+addons:
+- heroku-postgresql
+config_vars:
+  LANG: en_US.UTF-8
+  RAILS_ENV: staging
+  RACK_ENV: staging
+  SECRET_KEY_BASE: 9c08cb9c191cd9950549abf7f3ceb749e17bc35b1e7b221b9efc2a8ad201e7c5d63a8ecaa3fb8f00b8dfa322038a01d296669c02eabe5995e1e850ca30ead20a
+  RAILS_SERVE_STATIC_FILES: enabled
+default_process_types:
+  rake: bundle exec rake
+  console: bin/rails console
+  web: bin/rails server -p $PORT -e $RAILS_ENV

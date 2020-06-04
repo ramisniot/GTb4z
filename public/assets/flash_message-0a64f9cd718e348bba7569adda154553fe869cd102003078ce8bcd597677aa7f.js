@@ -1,0 +1,1 @@
+$().ready(function(){$("#flash_message").addClass("flash-message-box--enter"),setTimeout(function(){$("#flash_message").addClass("flash-message-box--leave")},5e3),$("#flash_message_close").click(function(){$("#flash_message").addClass("flash-message-box--leave")})});

@@ -1,0 +1,1 @@
+$(document).on("ready",function(){var e=document.getElementById("feedback");e&&e.focus(),$(".contact-form").on("submit",function(e){this.feedback.value.trim().length<5&&(e.preventDefault(),alert("Please provide your feedback"),document.getElementById("feedback").focus())})});

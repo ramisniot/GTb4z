@@ -1,0 +1,108 @@
+--rami--#<Bunny::Exchange:0x000055a898ebcc10>----
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:User> at /home/b4zubuntu/workspace/gotrack-prd/app/models/user.rb:4)
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:User> at /home/b4zubuntu/workspace/gotrack-prd/app/models/user.rb:4)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2020-06-04 07:02:02 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+Geokit is using the domain: gotrack.com
+  Rendered devise/sessions/_sign_in_form.html.erb (9.9ms)
+  [1m[35mLoginMessage Load (1.7ms)[0m  SELECT  "login_messages".* FROM "login_messages"  ORDER BY "login_messages"."id" DESC LIMIT 1
+  Rendered devise/sessions/new.html.erb within layouts/application (582.6ms)
+  Rendered layouts/includes/_map_key.erb (0.7ms)
+  Rendered layouts/includes/_footer.html.erb (0.9ms)
+Completed 200 OK in 842ms (Views: 744.3ms | ActiveRecord: 10.5ms)
+
+
+Started POST "/user/sign_in" for 127.0.0.1 at 2020-06-04 07:02:14 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MaHanWIk7E/RzgmorgfwTPFsiFCdZ81bng1yCzp7XFqbUWB8ikNMwDWKuZs+LFGIpKDhZhAwcy8gvjtIrmaZhQ==", "user"=>{"email"=>"admin@ramisn.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Geokit is using the domain: gotrack.com
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "admin@ramisn.com"]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (3.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["last_sign_in_at", "2020-06-03 13:49:55.594165"], ["current_sign_in_at", "2020-06-04 01:32:14.943611"], ["sign_in_count", 18], ["updated_at", "2020-06-04 01:32:14.944792"], ["id", 1]]
+  [1m[35m (3.8ms)[0m  COMMIT
+  [1m[36mAccount Load (1.4ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."provision_status_id" = $1 AND "accounts"."id" = $2 LIMIT 1[0m  [["provision_status_id", 1], ["id", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 209ms (ActiveRecord: 13.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-04 07:02:15 +0530
+Processing by HomeController#index as HTML
+Geokit is using the domain: gotrack.com
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.8ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."provision_status_id" = $1 AND "accounts"."id" = $2 LIMIT 1[0m  [["provision_status_id", 1], ["id", 1]]
+Redirected to http://localhost:3000/home/locations
+Completed 302 Found in 18ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/home/locations" for 127.0.0.1 at 2020-06-04 07:02:15 +0530
+Processing by HomeController#locations as HTML
+Geokit is using the domain: gotrack.com
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.6ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."provision_status_id" = $1 AND "accounts"."id" = $2 LIMIT 1[0m  [["provision_status_id", 1], ["id", 1]]
+  [1m[35m (1.6ms)[0m  SELECT COUNT(*) FROM "devices" WHERE "devices"."account_id" = $1 AND (devices.provision_status_id = 1)  [["account_id", 1]]
+  [1m[36mGroup Load (2.6ms)[0m  [1mSELECT "groups".* FROM "groups" WHERE "groups"."account_id" = $1  ORDER BY name[0m  [["account_id", 1]]
+  [1m[35mDevice Load (2.5ms)[0m  SELECT "devices".* FROM "devices" WHERE "devices"."group_id" IN (1) AND (devices.provision_status_id = 1)  ORDER BY name
+  [1m[36mReading Load (1.8ms)[0m  [1mSELECT "readings".* FROM "readings" WHERE "readings"."id" = 15 AND "readings"."location_id" IS NULL[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "devices" WHERE "devices"."account_id" = $1 AND "devices"."group_id" IS NULL AND (devices.provision_status_id = 1)  [["account_id", 1]]
+  Rendered home/_device_summary_header.html.erb (0.4ms)
+  [1m[36mDevice Load (1.7ms)[0m  [1mSELECT "devices".* FROM "devices" WHERE "devices"."group_id" = $1 AND (devices.provision_status_id = 1)  ORDER BY name[0m  [["group_id", 1]]
+  [1m[35mReading Load (1.1ms)[0m  SELECT "readings".* FROM "readings" WHERE "readings"."id" IN (15)
+  [1m[36mLocation Load (2.4ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" IN (1190)[0m
+  [1m[35mDigitalSensorReading Load (2.0ms)[0m  SELECT "digital_sensor_readings".* FROM "digital_sensor_readings" WHERE "digital_sensor_readings"."reading_id" IN (15)
+  [1m[36mDevice Load (1.2ms)[0m  [1mSELECT  "devices".* FROM "devices" WHERE "devices"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mMovementAlert Exists (2.1ms)[0m  SELECT  1 AS one FROM "movement_alerts" WHERE "movement_alerts"."device_id" = $1 AND "movement_alerts"."user_id" = $2 AND (violating_reading_id IS NULL) LIMIT 1  [["device_id", 1], ["user_id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT COUNT(*) FROM "devices" WHERE "devices"."account_id" = $1 AND "devices"."group_id" IS NULL AND (devices.provision_status_id = 1)[0m  [["account_id", 1]]
+  Rendered shared/_load_rgeo.erb (1.7ms)
+  Rendered home/_group_rows.html.erb (201.1ms)
+  Rendered home/locations.html.erb within layouts/home (203.6ms)
+  Rendered layouts/includes/_map_key.erb (0.1ms)
+  Rendered shared/_set_object_visibility_js.erb (0.6ms)
+  Rendered shared/_gotrack_logo.html.erb (1.1ms)
+  Rendered layouts/includes/header/_nav_tabs.html.erb (1.1ms)
+  Rendered layouts/includes/_header.html.erb (71.4ms)
+  Rendered layouts/includes/_switch_account.html.erb (0.8ms)
+  Rendered layouts/_flash_message.erb (0.6ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "devices" WHERE "devices"."account_id" = $1 AND "devices"."group_id" IS NULL AND (devices.provision_status_id = 1)  [["account_id", 1]]
+  [1m[36mDevice Load (0.9ms)[0m  [1mSELECT "devices".* FROM "devices" WHERE "devices"."account_id" = $1 AND (devices.provision_status_id = 1)  ORDER BY name[0m  [["account_id", 1]]
+  Rendered layouts/includes/_select_group_or_device.html.erb (7.4ms)
+  Rendered layouts/includes/_footer.html.erb (0.0ms)
+Completed 200 OK in 672ms (Views: 434.7ms | ActiveRecord: 39.1ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2020-06-04 07:02:18 +0530
+Processing by Admin::OverviewController#index as HTML
+Geokit is using the domain: gotrack.com
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (1.2ms)[0m  [1mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."provision_status_id" = $1 AND "accounts"."id" = $2 LIMIT 1[0m  [["provision_status_id", 1], ["id", 1]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "accounts" WHERE "accounts"."provision_status_id" = $1  [["provision_status_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "devices" WHERE (provision_status_id = 1)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "device_profiles"[0m
+  [1m[35mLoginMessage Load (0.3ms)[0m  SELECT  "login_messages".* FROM "login_messages"  ORDER BY "login_messages"."id" DESC LIMIT 1
+  Rendered admin/overview/_login_message_active.html.erb (1.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "login_messages".* FROM "login_messages"  ORDER BY "login_messages"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "login_messages".* FROM "login_messages"  ORDER BY "login_messages"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "login_messages".* FROM "login_messages"  ORDER BY "login_messages"."id" DESC LIMIT 1[0m
+  Rendered admin/overview/_login_message_preview.html.erb (2.0ms)
+  Rendered admin/overview/index.html.erb within layouts/admin (4.9ms)
+  Rendered layouts/includes/_map_key.erb (0.3ms)
+  Rendered shared/_gotrack_logo.html.erb (0.0ms)
+  Rendered layouts/admin/header/_nav_tabs.html.erb (0.6ms)
+  Rendered layouts/admin/header/_subnav.html.erb (0.5ms)
+  Rendered layouts/includes/_header.html.erb (5.9ms)
+Completed 200 OK in 154ms (Views: 131.6ms | ActiveRecord: 4.7ms)

@@ -1,0 +1,28 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: b4zubuntu
+  password: root
+  host: localhost
+  port: 5432
+
+
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: gotrack_dev
+
+test:
+  <<: *default
+  database: gotrack_test  
+  
+# development:
+#   adapter: postgresql
+#   database: gotrack_dev
+
+# test:
+#   adapter: postgresql
+#   database: gotrack_test
