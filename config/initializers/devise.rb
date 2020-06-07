@@ -3,7 +3,7 @@
 Devise.setup do |config|
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in DeviseMailer.
-  config.mailer_sender = ENV['DEVISE_EMAIL'] || 'no-reply@quantumiot.com'
+  config.mailer_sender = ENV['DEVISE_EMAIL'] || 'no-reply@byteforza.com'
   # Configure the class responsible to send e-mails.
   # config.mailer = "Devise::Mailer"
 

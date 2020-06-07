@@ -95,14 +95,14 @@ class UsersController < ApplicationController
   private
 
   def authorize_user
-    p current_account
+    # p current_account
     user = User.find(params[:id])
-    if user.authendication_token != nil
-      flash[:alert] = "Welcome"
-    else
-      flash[:error] = "Please confirm your email"
-      redirect_to "/user/sign_in"
-    end
+    # if user.authendication_token != nil
+    #   flash[:alert] = "Welcome"
+    # else
+    #   flash[:error] = "Please confirm your email"
+    #   redirect_to "/user/sign_in"
+    # end
     
     unless user.account == current_account
       redirect_back_or_default "/user/sign_out"

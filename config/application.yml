@@ -16,17 +16,47 @@ development:
   QIOT_ACCOUNT_TOKEN_IDENTIFIER: ''
   QIOT_ACCOUNT_TOKEN: ''
   RABBITMQ_PASSWORD_MESSAGES_CHANNEL: 'messages_rami'
-  # SMTP_DOMAIN: 'heroku.com'
-  # SMTP_HOST: 'smtp.gmail.com' 
-  # SMTP_PASSWORD: 'ramibe36' 
-  # SMTP_PORT: '587' 
-  # SMTP_USERNAME: 'rameshkror'
 
   SMTP_DOMAIN: 'byteforza.com'
   SMTP_HOST: 'smtp.office365.com' 
   SMTP_PASSWORD: 'Ramibe$26' 
   SMTP_PORT: '587' 
   SMTP_USERNAME: 'ramesh.k@byteforza.com'
+
+  # cmFtaXNuCg==
+  # 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
+
+
+  # SMTP_DOMAIN: 'gmail.com'
+  # SMTP_HOST: 'smtp.gmail.com' 
+  # SMTP_PASSWORD: 'ramibe36' 
+  # SMTP_PORT: '587' 
+  # SMTP_USERNAME: 'rameshkror'
+
+# Mandril
+# username: ramisn
+# pwd: 77bdee6acc0916232dfc9d2873882096-us16
+
+
+
+# "smtpOptions": {
+
+#         "host": "smtp.ethereal.email",
+
+#     "port": 587,
+
+#     "auth": {
+
+#         "user": "augustus.kohler@ethereal.email",
+
+#         "pass": "g9kBubGAx3dPq2ptUK"
+
+#         }
+  # SMTP_DOMAIN: 'byteforza.com'
+  # SMTP_HOST: 'smtp.office365.com' 
+  # SMTP_PASSWORD: 'Ramibe$26' 
+  # SMTP_PORT: '587' 
+  # SMTP_USERNAME: 'ramesh.k@byteforza.com'
 
 # development:
 #   QIOT_IO_API_TOKEN: ''
@@ -53,11 +83,23 @@ development:
 #   RABBITMQ_PASSWORD_MESSAGES_CHANNEL: 'messages_mqtt' 
 
 production:
+  # SMTP_DOMAIN: 'heroku.com'
+  # SMTP_HOST: 'smtp.gmail.com' 
+  # SMTP_PASSWORD: 'ramibe36'
+  # SMTP_PORT: '587' 
+  # SMTP_USERNAME: 'rameshkror'
+
   SMTP_DOMAIN: 'heroku.com'
-  SMTP_HOST: 'smtp.gmail.com' 
-  SMTP_PASSWORD: 'ramibe36' 
+  SMTP_HOST: 'smtp.sendgrid.net' 
+  SMTP_PASSWORD: 'Ramibe$26' 
   SMTP_PORT: '587' 
-  SMTP_USERNAME: 'rameshkror'
+  SMTP_USERNAME: 'ramisn'
+
+  # SMTP_DOMAIN: 'byteforza.com'
+  # SMTP_HOST: 'smtp.office365.com' 
+  # SMTP_PASSWORD: 'Ramibe$26' 
+  # SMTP_PORT: '587' 
+  # SMTP_USERNAME: 'ramesh.k@byteforza.com'
 
   # SMTP_DOMAIN: 'byteforza.com'
   # SMTP_HOST: 'smtp.office365.com' 

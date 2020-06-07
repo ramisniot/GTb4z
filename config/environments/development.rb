@@ -42,18 +42,18 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   # config.action_mailer.delivery_method = :smtp
   # config.action_mailer.smtp_settings = {
-  #   address:              'smtp.gmail.com',
+  #   address:              'smtp.sendgrid.net',
   #   port:                 587,
-  #   domain:               ENV['SMTP_DOMAIN'],
-  #   user_name:            ENV['SMTP_USERNAME'],
-  #   password:             ENV['SMTP_PASSWORD'],
+  #   domain:               'sendgrid.net',
+  #   user_name:            'ramisn',
+  #   password:             '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',
   #   authentication:       'plain',
   #   enable_starttls_auto: true
   # }
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:        'smtp.office365.com',
+    address:        'smtp.office365.net',
     port:           587,
     username:       ENV['SMTP_USERNAME'],
     password:       ENV['SMTP_PASSWORD'],

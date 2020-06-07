@@ -31,7 +31,7 @@ class Admin::UsersController < ApplicationController
       @user.roles = [get_role_from_params]
 
       if @user.save
-        UserMailer.registration_confirmation(@user).deliver_now
+        # UserMailer.registration_confirmation(@user).deliver_now
         flash[:success] = "#{@user.email} was created successfully"
         redirect_to admin_users_path
       else
