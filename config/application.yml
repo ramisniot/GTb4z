@@ -95,11 +95,11 @@ development:
 #   RABBITMQ_PASSWORD_MESSAGES_CHANNEL: 'messages_mqtt' 
 
 production:
-  SMTP_DOMAIN: 'gmail.com'
-  SMTP_HOST: 'smtp.gmail.com' 
-  SMTP_PASSWORD: 'ramibe36' 
-  SMTP_PORT: '587' 
-  SMTP_USERNAME: 'rameshkror'
+  # SMTP_DOMAIN: 'gmail.com'
+  # SMTP_HOST: 'smtp.gmail.com' 
+  # SMTP_PASSWORD: 'ramibe36' 
+  # SMTP_PORT: '587' 
+  # SMTP_USERNAME: 'rameshkror'
   # ENV['SMTP_ADDR']
 
   # SMTP_DOMAIN: 'heroku.com'
@@ -107,6 +107,12 @@ production:
   # SMTP_PASSWORD: 'Ramibe$26' 
   # SMTP_PORT: '587' 
   # SMTP_USERNAME: 'ramisn'
+
+  SMTP_DOMAIN: 'heroku.com'
+  SMTP_HOST: 'smtp.ethereal.email' 
+  SMTP_PASSWORD: 'g9kBubGAx3dPq2ptUK' 
+  SMTP_PORT: '587' 
+  SMTP_USERNAME: 'augustus.kohler@ethereal.email'
 
   # SMTP_DOMAIN: 'heroku.com'
   # SMTP_HOST: 'smtp.office365.com' 
