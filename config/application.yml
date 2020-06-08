@@ -95,7 +95,7 @@ production:
   # SMTP_PORT: '587' 
   # SMTP_USERNAME: 'ramisn'
 
-  SMTP_DOMAIN: 'byteforza.com'
+  SMTP_DOMAIN: 'heroku.com'
   SMTP_HOST: 'smtp.office365.com' 
   SMTP_PASSWORD: 'Ramibe$26' 
   SMTP_PORT: '587' 
