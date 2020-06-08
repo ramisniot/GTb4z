@@ -89,7 +89,7 @@ production:
   # SMTP_PORT: '587' 
   # SMTP_USERNAME: 'rameshkror'
 
-  SMTP_DOMAIN: 'heroku.com'
+  SMTP_DOMAIN: 'sendgrid.net'
   SMTP_HOST: 'smtp.sendgrid.net' 
   SMTP_PASSWORD: 'Ramibe$26' 
   SMTP_PORT: '587' 
