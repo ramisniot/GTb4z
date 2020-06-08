@@ -89,17 +89,17 @@ production:
   # SMTP_PORT: '587' 
   # SMTP_USERNAME: 'rameshkror'
 
-  SMTP_DOMAIN: 'sendgrid.net'
-  SMTP_HOST: 'smtp.sendgrid.net' 
-  SMTP_PASSWORD: 'Ramibe$26' 
-  SMTP_PORT: '587' 
-  SMTP_USERNAME: 'ramisn'
-
-  # SMTP_DOMAIN: 'byteforza.com'
-  # SMTP_HOST: 'smtp.office365.com' 
+  # SMTP_DOMAIN: 'sendgrid.net'
+  # SMTP_HOST: 'smtp.sendgrid.net' 
   # SMTP_PASSWORD: 'Ramibe$26' 
   # SMTP_PORT: '587' 
-  # SMTP_USERNAME: 'ramesh.k@byteforza.com'
+  # SMTP_USERNAME: 'ramisn'
+
+  SMTP_DOMAIN: 'byteforza.com'
+  SMTP_HOST: 'smtp.office365.com' 
+  SMTP_PASSWORD: 'Ramibe$26' 
+  SMTP_PORT: '587' 
+  SMTP_USERNAME: 'ramesh.k@byteforza.com'
 
   # SMTP_DOMAIN: 'byteforza.com'
   # SMTP_HOST: 'smtp.office365.com' 
