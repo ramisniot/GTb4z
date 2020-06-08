@@ -97,7 +97,7 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:        'smtp.office365.com',
+    address:        'smtp.sendgrid.net',
     port:           587,
     username:       ENV['SMTP_USERNAME'],
     password:       ENV['SMTP_PASSWORD'],

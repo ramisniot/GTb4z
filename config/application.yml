@@ -17,11 +17,17 @@ development:
   QIOT_ACCOUNT_TOKEN: ''
   RABBITMQ_PASSWORD_MESSAGES_CHANNEL: 'messages_rami'
 
-  SMTP_DOMAIN: 'byteforza.com'
-  SMTP_HOST: 'smtp.office365.com' 
+  # SMTP_DOMAIN: 'byteforza.com'
+  # SMTP_HOST: 'smtp.office365.com' 
+  # SMTP_PASSWORD: 'Ramibe$26' 
+  # SMTP_PORT: '587' 
+  # SMTP_USERNAME: 'ramesh.k@byteforza.com'
+
+  SMTP_DOMAIN: 'sendgrid.net'
+  SMTP_HOST: 'smtp.sendgrid.net' 
   SMTP_PASSWORD: 'Ramibe$26' 
   SMTP_PORT: '587' 
-  SMTP_USERNAME: 'ramesh.k@byteforza.com'
+  SMTP_USERNAME: 'ramisn'
 
   # cmFtaXNuCg==
   # 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
@@ -89,17 +95,17 @@ production:
   # SMTP_PORT: '587' 
   # SMTP_USERNAME: 'rameshkror'
 
-  # SMTP_DOMAIN: 'sendgrid.net'
-  # SMTP_HOST: 'smtp.sendgrid.net' 
-  # SMTP_PASSWORD: 'Ramibe$26' 
-  # SMTP_PORT: '587' 
-  # SMTP_USERNAME: 'ramisn'
-
-  SMTP_DOMAIN: 'heroku.com'
-  SMTP_HOST: 'smtp.office365.com' 
+  SMTP_DOMAIN: 'sendgrid.net'
+  SMTP_HOST: 'smtp.sendgrid.net' 
   SMTP_PASSWORD: 'Ramibe$26' 
   SMTP_PORT: '587' 
-  SMTP_USERNAME: 'ramesh.k@byteforza.com'
+  SMTP_USERNAME: 'ramisn'
+
+  # SMTP_DOMAIN: 'heroku.com'
+  # SMTP_HOST: 'smtp.office365.com' 
+  # SMTP_PASSWORD: 'Ramibe$26' 
+  # SMTP_PORT: '587' 
+  # SMTP_USERNAME: 'ramesh.k@byteforza.com'
 
   # SMTP_DOMAIN: 'byteforza.com'
   # SMTP_HOST: 'smtp.office365.com' 
