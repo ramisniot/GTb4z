@@ -23,21 +23,27 @@ development:
   # SMTP_PORT: '587' 
   # SMTP_USERNAME: 'ramesh.k@byteforza.com'
 
-  SMTP_DOMAIN: 'sendgrid.net'
-  SMTP_HOST: 'smtp.sendgrid.net' 
-  SMTP_PASSWORD: 'Ramibe$26' 
-  SMTP_PORT: '587' 
-  SMTP_USERNAME: 'ramisn'
+  # SMTP_DOMAIN: 'sendgrid.net'
+  # SMTP_HOST: 'smtp.sendgrid.net' 
+  # SMTP_PASSWORD: 'Ramibe$26' 
+  # SMTP_PORT: '587' 
+  # SMTP_USERNAME: 'ramisn'
+
+  # SMTP_DOMAIN: 'gmail.com'
+  # SMTP_ADDR: 'smtp.gmail.com' 
+  # SMTP_PASSWORD: 'ramibe36'
+  # SMTP_PORT: '587' 
+  # SMTP_USERNAME: 'rameshkror'
 
   # cmFtaXNuCg==
   # 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
 
 
-  # SMTP_DOMAIN: 'gmail.com'
-  # SMTP_HOST: 'smtp.gmail.com' 
-  # SMTP_PASSWORD: 'ramibe36' 
-  # SMTP_PORT: '587' 
-  # SMTP_USERNAME: 'rameshkror'
+  SMTP_DOMAIN: 'gmail.com'
+  SMTP_HOST: 'smtp.gmail.com' 
+  SMTP_PASSWORD: 'ramibe36' 
+  SMTP_PORT: '587' 
+  SMTP_USERNAME: 'rameshkror'
 
 # Mandril
 # username: ramisn
@@ -90,8 +96,8 @@ development:
 
 production:
   SMTP_DOMAIN: 'gmail.com'
-  SMTP_ADDR: 'smtp.gmail.com' 
-  SMTP_PASSWORD: 'ramibe36'
+  SMTP_HOST: 'smtp.gmail.com' 
+  SMTP_PASSWORD: 'ramibe36' 
   SMTP_PORT: '587' 
   SMTP_USERNAME: 'rameshkror'
   # ENV['SMTP_ADDR']
