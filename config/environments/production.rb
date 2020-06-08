@@ -86,7 +86,7 @@ Rails.application.configure do
   # config.action_mailer.default_url_options = { host: 'gtb4za.herokuapp.com' }
   # config.action_mailer.delivery_method = :smtp
   # config.action_mailer.smtp_settings = {
-  #   address:              ENV['SMTP_HOST'],
+  #   address:              ENV['SMTP_ADDR'],
   #   port:                 ENV['SMTP_PORT'],
   #   domain:               ENV['SMTP_DOMAIN'],
   #   user_name:            ENV['SMTP_USERNAME'],
@@ -97,7 +97,7 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:        'smtp.sendgrid.net',
+    address:        ENV['SMTP_ADDR'],
     port:           587,
     username:       ENV['SMTP_USERNAME'],
     password:       ENV['SMTP_PASSWORD'],
