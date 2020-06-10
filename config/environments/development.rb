@@ -62,5 +62,15 @@ Rails.application.configure do
     enable_starttls_auto: true
   }
 
+#   config.action_mailer.smtp_settings = {
+#   :user_name => 'app173421754@heroku.com',
+#   :password => '8dwnvgco8044',
+#   :domain => 'heroku.com',
+#   :address => 'smtp.sendgrid.net',
+#   :port => 465,
+#   :authentication => :plain,
+#   :enable_starttls_auto => true
+# }
+
   config.cache_store = :redis_store
 end
