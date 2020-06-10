@@ -2,7 +2,7 @@ require Rails.root.join('lib', 'devise', 'encryptors', 'numerexsha1')
 
 class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :recoverable, :rememberable,
-    :trackable, :validatable, :timeoutable, :confirmable
+    :trackable, :validatable, :timeoutable#, :confirmable
 
   ROLES_BY_PRIVILEGE = %i(superadmin admin read_write view_only)
 
