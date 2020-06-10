@@ -100,6 +100,10 @@ development:
 #   RABBITMQ_PASSWORD_MESSAGES_CHANNEL: 'messages_mqtt' 
 
 production:
+  RACK_ENV: 'production'
+  RAILS_ENV: 'production'
+  SECRET_KEY_BASE: ''
+  SENDGRID_PASSWORD: ''
   # SMTP_DOMAIN: 'gmail.com'
   # SMTP_HOST: 'smtp.gmail.com' 
   # SMTP_PASSWORD: 'ramibe36' 
@@ -125,8 +129,8 @@ production:
   # MAILGUN_SMTP_PASSWORD: '803e97cc5700068d0ba740133a062576-8b34de1b-e47754b4'
 
   # SENDGRID_USERNAME: 'app174076221@heroku.com'
-  SENDGRID_PASSWORD: ''
-  SECRET_KEY_BASE: ''
+  # SENDGRID_PASSWORD: ''
+  # SECRET_KEY_BASE: ''
 
   # SMTP_DOMAIN: 'heroku.com'
   # SMTP_HOST: 'smtp.office365.com' 

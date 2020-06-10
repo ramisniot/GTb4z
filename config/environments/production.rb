@@ -105,7 +105,7 @@ Rails.application.configure do
   #   authentication: :login
   # }
   config.action_mailer.default_url_options = {
-    :host => 'gtb4za.herokuapp.com'
+    :host => 'gtbforza.herokuapp.com'
   }
   config.action_mailer.perform_deliveries = true
 
