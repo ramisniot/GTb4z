@@ -23,11 +23,11 @@ development:
   # SMTP_PORT: '587' 
   # SMTP_USERNAME: 'ramesh.k@byteforza.com'
 
-  # SMTP_DOMAIN: 'sendgrid.net'
-  # SMTP_HOST: 'smtp.sendgrid.net' 
-  # SMTP_PASSWORD: 'Ramibe$26' 
-  # SMTP_PORT: '587' 
-  # SMTP_USERNAME: 'ramisn'
+  SMTP_DOMAIN: 'sendgrid.net'
+  SMTP_HOST: 'smtp.sendgrid.net' 
+  SMTP_PASSWORD: 'Ramibe$26' 
+  SMTP_PORT: '587' 
+  SMTP_USERNAME: 'ramisn'
 
   # SMTP_DOMAIN: 'gmail.com'
   # SMTP_ADDR: 'smtp.gmail.com' 
@@ -39,16 +39,16 @@ development:
   # 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
 
 
-  SMTP_DOMAIN: 'gmail.com'
-  SMTP_HOST: 'smtp.gmail.com' 
-  SMTP_PASSWORD: 'ramibe36' 
-  SMTP_PORT: '587' 
-  SMTP_USERNAME: 'rameshkror'
+  # SMTP_DOMAIN: 'gmail.com'
+  # SMTP_HOST: 'smtp.gmail.com' 
+  # SMTP_PASSWORD: 'ramibe36' 
+  # SMTP_PORT: '587' 
+  # SMTP_USERNAME: 'rameshkror'
 
-  MAILGUN_SMTP_PORT: '587'
-  MAILGUN_SMTP_SERVER: 'smtp.mailgun.org'
-  MAILGUN_SMTP_LOGIN: 'postmaster@sandbox3845405bcd6d455d96b827b011bd3cb4.mailgun.org'
-  MAILGUN_SMTP_PASSWORD: '803e97cc5700068d0ba740133a062576-8b34de1b-e47754b4'
+  # MAILGUN_SMTP_PORT: '587'
+  # MAILGUN_SMTP_SERVER: 'smtp.mailgun.org'
+  # MAILGUN_SMTP_LOGIN: 'postmaster@sandbox3845405bcd6d455d96b827b011bd3cb4.mailgun.org'
+  # MAILGUN_SMTP_PASSWORD: '803e97cc5700068d0ba740133a062576-8b34de1b-e47754b4'
 
 # Mandril
 # username: ramisn
@@ -123,6 +123,9 @@ production:
   MAILGUN_SMTP_SERVER: 'smtp.mailgun.org'
   MAILGUN_SMTP_LOGIN: 'postmaster@sandbox3845405bcd6d455d96b827b011bd3cb4.mailgun.org'
   MAILGUN_SMTP_PASSWORD: '803e97cc5700068d0ba740133a062576-8b34de1b-e47754b4'
+
+  SENDGRID_USERNAME: 'app173421754@heroku.com'
+  SENDGRID_PASSWORD: '8dwnvgco8044'
 
   # SMTP_DOMAIN: 'heroku.com'
   # SMTP_HOST: 'smtp.office365.com' 
