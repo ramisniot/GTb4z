@@ -40,16 +40,7 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
   config.action_mailer.perform_deliveries = true
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.smtp_settings = {
-  #   address:              'smtp.sendgrid.net',
-  #   port:                 587,
-  #   domain:               'sendgrid.net',
-  #   user_name:            'ramisn',
-  #   password:             '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',
-  #   authentication:       'plain',
-  #   enable_starttls_auto: true
-  # }
+  
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
@@ -61,17 +52,6 @@ Rails.application.configure do
     authentication: :login,
     enable_starttls_auto: true
   }
-
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.smtp_settings = {
-  #   address:        'smtp.office365.com',
-  #   port:           587,
-  #   username:       'ramesh.k@byteforza.com',
-  #   password:       'Ramibe$36',
-  #   domain:         'office365.com',
-  #   authentication: :plain,
-  #   enable_starttls_auto: true
-  # }
 
   config.cache_store = :redis_store
 end
