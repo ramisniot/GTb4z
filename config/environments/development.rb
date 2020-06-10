@@ -53,7 +53,7 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:        'smtp.gmail.com',
+    address:        ENV['SMTP_HOST'],
     port:           587,
     username:       ENV['SMTP_USERNAME'],
     password:       ENV['SMTP_PASSWORD'],
@@ -62,15 +62,16 @@ Rails.application.configure do
     enable_starttls_auto: true
   }
 
-#   config.action_mailer.smtp_settings = {
-#   :user_name => 'app173421754@heroku.com',
-#   :password => '8dwnvgco8044',
-#   :domain => 'heroku.com',
-#   :address => 'smtp.sendgrid.net',
-#   :port => 465,
-#   :authentication => :plain,
-#   :enable_starttls_auto => true
-# }
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #   address:        'smtp.office365.com',
+  #   port:           587,
+  #   username:       'ramesh.k@byteforza.com',
+  #   password:       'Ramibe$36',
+  #   domain:         'office365.com',
+  #   authentication: :plain,
+  #   enable_starttls_auto: true
+  # }
 
   config.cache_store = :redis_store
 end
