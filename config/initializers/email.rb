@@ -11,12 +11,21 @@ email_config ||= {}
 #   authentication: :plain
 # }
 
+# ActionMailer::Base.smtp_settings = {
+#   :port           => ENV['MAILGUN_SMTP_PORT'],
+#   :address        => ENV['MAILGUN_SMTP_SERVER'],
+#   :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+#   :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+#   :domain         => 'gtbforza.herokuapp.com',
+#   :authentication => :plain
+# }
+# ActionMailer::Base.delivery_method = :smtp
+
 ActionMailer::Base.smtp_settings = {
-  :port           => ENV['MAILGUN_SMTP_PORT'],
-  :address        => ENV['MAILGUN_SMTP_SERVER'],
-  :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
-  :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+  :port           => ENV['SENDINBLUE_SMTP_PORT'],
+  :address        => ENV['SENDINBLUE_SMTP_SERVER'],
+  :user_name      => ENV['SENDINBLUE_SMTP_LOGIN'],
+  :password       => ENV['SENDINBLUE_SMTP_PASSWORD'],
   :domain         => 'gtbforza.herokuapp.com',
   :authentication => :plain
 }
-# ActionMailer::Base.delivery_method = :smtp

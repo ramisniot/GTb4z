@@ -95,32 +95,33 @@ Rails.application.configure do
   #   enable_starttls_auto: true
   # }
 
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #   # address:        ENV['SMTP_HOST'],
+  #   # port:           587,
+  #   # username:       ENV['SMTP_USERNAME'],
+  #   # password:       ENV['SMTP_PASSWORD'],
+  #   # domain:         ENV['SMTP_DOMAIN'],
+  #   # authentication: :login,
+  #   :port           => ENV['MAILGUN_SMTP_PORT'],
+  #   :address        => ENV['MAILGUN_SMTP_SERVER'],
+  #   :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+  #   :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+  #   :domain         => 'gtbforza.herokuapp.com',
+  #   :authentication => :plain,
+  #   enable_starttls_auto: true
+  # }
+#SendInBlue
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    # address:        ENV['SMTP_HOST'],
-    # port:           587,
-    # username:       ENV['SMTP_USERNAME'],
-    # password:       ENV['SMTP_PASSWORD'],
-    # domain:         ENV['SMTP_DOMAIN'],
-    # authentication: :login,
-    :port           => ENV['MAILGUN_SMTP_PORT'],
-    :address        => ENV['MAILGUN_SMTP_SERVER'],
-    :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
-    :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+    :port           => ENV['SENDINBLUE_SMTP_PORT'],
+    :address        => ENV['SENDINBLUE_SMTP_SERVER'],
+    :user_name      => ENV['SENDINBLUE_SMTP_LOGIN'],
+    :password       => ENV['SENDINBLUE_SMTP_PASSWORD'],
     :domain         => 'gtbforza.herokuapp.com',
     :authentication => :plain,
     enable_starttls_auto: true
   }
-
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.smtp_settings = {
-  #   address:        'smtp.ethereal.email',
-  #   port:           587,
-  #   username:       ENV['SMTP_USERNAME'],
-  #   password:       ENV['SMTP_PASSWORD'],
-  #   domain:         ENV['SMTP_DOMAIN'],
-  #   authentication: :login
-  # }
   # config.action_mailer.default_url_options = {
   #   :host => 'gtbforza.herokuapp.com'
   # }
