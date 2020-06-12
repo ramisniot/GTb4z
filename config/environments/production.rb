@@ -97,12 +97,18 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:        ENV['SMTP_HOST'],
-    port:           587,
-    username:       ENV['SMTP_USERNAME'],
-    password:       ENV['SMTP_PASSWORD'],
-    domain:         ENV['SMTP_DOMAIN'],
-    authentication: :login,
+    # address:        ENV['SMTP_HOST'],
+    # port:           587,
+    # username:       ENV['SMTP_USERNAME'],
+    # password:       ENV['SMTP_PASSWORD'],
+    # domain:         ENV['SMTP_DOMAIN'],
+    # authentication: :login,
+    :port           => ENV['MAILGUN_SMTP_PORT'],
+    :address        => ENV['MAILGUN_SMTP_SERVER'],
+    :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+    :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+    :domain         => 'gtbforza.herokuapp.com',
+    :authentication => :plain,
     enable_starttls_auto: true
   }
 
