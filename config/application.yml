@@ -18,11 +18,11 @@ development:
   RABBITMQ_PASSWORD_MESSAGES_CHANNEL: 'messages_rami'
 
   # working
-  # SMTP_DOMAIN: 'gmail.com'
-  # SMTP_HOST: 'smtp.gmail.com' 
-  # SMTP_PASSWORD: 'ramibe36' 
-  # SMTP_PORT: '587' 
-  # SMTP_USERNAME: 'rameshkror'
+  SMTP_DOMAIN: 'gmail.com'
+  SMTP_HOST: 'smtp.gmail.com' 
+  SMTP_PASSWORD: 'ramibe36' 
+  SMTP_PORT: '587' 
+  SMTP_USERNAME: 'rameshkror'
 
   
 # development:

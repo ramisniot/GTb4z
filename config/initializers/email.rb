@@ -6,7 +6,7 @@ ActionMailer::Base.smtp_settings = {
   address:        ENV['SMTP_HOST']     || email_config['SMTP_HOST']      || 'smtp.sparkpostmail.com',
   user_name:      ENV['SMTP_USERNAME'] || email_config['SMTP_USERNAME']  || 'SMTP_Injection',
   password:       ENV['SMTP_PASSWORD'] || email_config['SMTP_PASSWORD'],
-  domain:         ENV['SMTP_DOMAIN']   || email_config['SMTP_DOMAIN']    || 'heroku.com',
+  domain:         ENV['SMTP_DOMAIN']   || email_config['SMTP_DOMAIN']    || 'byteforza.com',
   tls:            ENV['SMTP_TLS']      || email_config['SMTP_TLS']       || false,
   authentication: :plain
 }
