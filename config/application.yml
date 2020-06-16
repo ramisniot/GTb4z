@@ -24,6 +24,13 @@ development:
   SMTP_PORT: '587' 
   SMTP_USERNAME: 'rameshkror'
 
+  # SIB working
+  # SMTP_DOMAIN: 'byteforza.com'
+  # SMTP_HOST: 'smtp-relay.sendinblue.com' 
+  # SMTP_PASSWORD: '83gMY1GyDFLk9HA5' 
+  # SMTP_PORT: '587' 
+  # SMTP_USERNAME: 'randy@gotrack.com'
+
   
 # development:
 #   QIOT_IO_API_TOKEN: ''

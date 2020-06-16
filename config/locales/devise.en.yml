@@ -3,7 +3,7 @@
 en:
   devise:
     confirmations:
-      confirmed: "Your email address has been successfully confirmed."
+      confirmed: "Your email id has been successfully verified.  You could now login to start using the GoTrack Services."
       send_instructions: "You will receive an email with instructions for how to confirm your email address in a few minutes."
       send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes."
     failure:
@@ -15,7 +15,7 @@ en:
       not_found_in_database: "Invalid %{authentication_keys} or password."
       timeout: "Your session expired. Please sign in again to continue."
       unauthenticated: "You need to sign in or sign up before continuing."
-      unconfirmed: "You have to confirm your email address before continuing."
+      unconfirmed: "Your email id has been not yet verified. Please click on the email confirmation link that was sent to  your email id.  If you have not yet received the  email, please contact GoTrack Support."
     mailer:
       confirmation_instructions:
         subject: "Welcome to GoTrack!  Confirm your account."

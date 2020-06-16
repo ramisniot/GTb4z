@@ -219,10 +219,12 @@ body {
         <!-- THANK YOU FOR JOINING US -->
       </h4>
       <p class='text'>
-        Welcome to GoTrack!.   Now  you can track your vehicles at all time during the day or night.   You can watch the vehicle’s journey on Maps, access the last six months of activity and download the travel information to keep for your records.
+        Welcome to GoTrack! <br>
+        Now  you can track your vehicles at all time during the day or night.   You can watch the vehicle’s journey on Maps, access the last six months of activity and download the travel information to keep for your records.
       </p>
       <p class='text'>
-        <p><%= link_to 'Confirm your email on GoTrack by this link', confirmation_url(@resource, confirmation_token: @token) %></p>
+        <p>Here is a link to begin using GoTrack Services:<br>
+        	<%= link_to 'Confirm your email on GoTrack', confirmation_url(@resource, confirmation_token: @token) %></p>
       </p>
       <p class='text'>
         <p>

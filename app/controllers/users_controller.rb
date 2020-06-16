@@ -27,7 +27,7 @@ class UsersController < ApplicationController
     if params[:user][:password] == params[:user][:password_confirmation] and not params[:user][:password].blank?
       @user.password = params[:user][:password]
       if @user.save
-        flash[:success] = @user.email + ' was created successfully'
+        flash[:success] = @user.email + ' was created successfully and an email for verifying the user has been sent.'
         redirect_to users_path
       else # Display errors from model validation
         flash.now[:error] = @user.errors.to_a.uniq.join('<br />')

@@ -32,7 +32,7 @@ class Admin::UsersController < ApplicationController
 
       if @user.save
         # UserMailer.registration_confirmation(@user).deliver_now
-        flash[:success] = "#{@user.email} was created successfully"
+        flash[:success] = "#{@user.email} was created successfully and an email for verifying the user has been sent."
         redirect_to admin_users_path
       else
         flash.now[:error] = @user.errors.to_a.uniq.join('<br />')
