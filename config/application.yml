@@ -24,11 +24,11 @@ development:
   RABBITMQ_PASSWORD_MESSAGES_CHANNEL: 'messages_rami'
 
   # working
-  SMTP_DOMAIN: 'gmail.com'
-  SMTP_HOST: 'smtp.gmail.com' 
-  SMTP_PASSWORD: 'ramibe36' 
-  SMTP_PORT: '587' 
-  SMTP_USERNAME: 'rameshkror'
+  # SMTP_DOMAIN: 'gmail.com'
+  # SMTP_HOST: 'smtp.gmail.com' 
+  # SMTP_PASSWORD: 'ramibe36' 
+  # SMTP_PORT: '587' 
+  # SMTP_USERNAME: 'rameshkror'
 
   # SIB working
   # SMTP_DOMAIN: 'byteforza.com'
@@ -37,6 +37,14 @@ development:
   # SMTP_PORT: '587' 
   # SMTP_USERNAME: 'randy@gotrack.com'
   # 9360655444 Kalimuthu
+  
+  MAILGUN_API_KEY: '4f754dff9dc7fd880b3ecff82d9ade47-8b34de1b-7cd780ea'
+  MAILGUN_DOMAIN: 'sandbox18fb051a11b748209237d8bf8fec6185.mailgun.org'
+  MAILGUN_SMTP_PORT: '587'
+  MAILGUN_PUBLIC_KEY: 'pubkey-8731ad7f66fe94341f4bff355ff04ac1'
+  MAILGUN_SMTP_LOGIN: 'postmaster@sandbox18fb051a11b748209237d8bf8fec6185.mailgun.org'
+  MAILGUN_SMTP_PASSWORD: '18f9fc9f79294f2a87d3b7a8a0a89400-8b34de1b-2830ca45'
+  MAILGUN_SMTP_SERVER: 'smtp.mailgun.org'
 
   
 # development:

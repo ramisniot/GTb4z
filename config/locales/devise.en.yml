@@ -20,7 +20,7 @@ en:
       confirmation_instructions:
         subject: "Welcome to GoTrack!  Confirm your account."
       reset_password_instructions:
-        subject: "Reset password instructions"
+        subject: "Set Password for GoTrack Account"
       unlock_instructions:
         subject: "Unlock instructions"
     omniauth_callbacks:

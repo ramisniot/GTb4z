@@ -43,14 +43,24 @@ Rails.application.configure do
   
 
   config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #   address:        ENV['SMTP_HOST'],
+  #   port:           587,
+  #   username:       ENV['SMTP_USERNAME'],
+  #   password:       ENV['SMTP_PASSWORD'],
+  #   domain:         ENV['SMTP_DOMAIN'],
+  #   authentication: :login,
+  #   enable_starttls_auto: true
+  # }
+
   config.action_mailer.smtp_settings = {
-    address:        ENV['SMTP_HOST'],
-    port:           587,
-    username:       ENV['SMTP_USERNAME'],
-    password:       ENV['SMTP_PASSWORD'],
-    domain:         ENV['SMTP_DOMAIN'],
-    authentication: :login,
-    enable_starttls_auto: true
+  :port           => ENV['MAILGUN_SMTP_PORT'],
+  :address        => ENV['MAILGUN_SMTP_SERVER'],
+  :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+  :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+  :domain         => 'gtb4za.herokuapp.com',
+  :authentication => :plain,
+  enable_starttls_auto: true
   }
 
   config.cache_store = :redis_store
