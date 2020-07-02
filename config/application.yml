@@ -13,63 +13,24 @@ development:
   RABBITMQ_USER: 'admin'
   RABBITMQ_PASSWORD: 'admin'
 
-  # RABBITMQ_HOST: 'mqtt.flespi.io'
-  # RABBITMQ_PORT: '443'
-  # RABBITMQ_USER: 'FlespiToken 0ZE9K9PRY0VyYlY8rVJmMAntGCtrgo46bx4LwJtiAcHmnvkCeTMOkZ7Opp5vD0qC'
-  # RABBITMQ_PASSWORD: ''
+
 
   QIOT_USER_SERVICE_URL: 'http://localhost:3001'
   QIOT_ACCOUNT_TOKEN_IDENTIFIER: ''
   QIOT_ACCOUNT_TOKEN: ''
   RABBITMQ_PASSWORD_MESSAGES_CHANNEL: 'messages_rami'
 
-  # working
-  # SMTP_DOMAIN: 'gmail.com'
-  # SMTP_HOST: 'smtp.gmail.com' 
-  # SMTP_PASSWORD: 'ramibe36' 
-  # SMTP_PORT: '587' 
-  # SMTP_USERNAME: 'rameshkror'
 
-  # SIB working
-  # SMTP_DOMAIN: 'byteforza.com'
-  # SMTP_HOST: 'smtp-relay.sendinblue.com' 
-  # SMTP_PASSWORD: '83gMY1GyDFLk9HA5' 
-  # SMTP_PORT: '587' 
-  # SMTP_USERNAME: 'randy@gotrack.com'
-  # 9360655444 Kalimuthu
-  
-  MAILGUN_API_KEY: '4f754dff9dc7fd880b3ecff82d9ade47-8b34de1b-7cd780ea'
-  MAILGUN_DOMAIN: 'sandbox18fb051a11b748209237d8bf8fec6185.mailgun.org'
-  MAILGUN_SMTP_PORT: '587'
-  MAILGUN_PUBLIC_KEY: 'pubkey-8731ad7f66fe94341f4bff355ff04ac1'
-  MAILGUN_SMTP_LOGIN: 'postmaster@sandbox18fb051a11b748209237d8bf8fec6185.mailgun.org'
-  MAILGUN_SMTP_PASSWORD: '18f9fc9f79294f2a87d3b7a8a0a89400-8b34de1b-2830ca45'
-  MAILGUN_SMTP_SERVER: 'smtp.mailgun.org'
 
   
 # development:
 #   QIOT_IO_API_TOKEN: ''
 #   GOOGLE_MAPS_API_KEY: ''
-#   RABBITMQ_HOST: 'https://devoted-collie.rmq.cloudamqp.com/'
-#   RABBITMQ_PORT: '5672'
-#   RABBITMQ_USER: 'sfmysjdr'
-#   RABBITMQ_PASSWORD: 'MWafevjRVSzWJXfWoq5J4SbKXEoxQqoX'
+#   
 #   QIOT_USER_SERVICE_URL: 'http://qiot.io'
 #   QIOT_ACCOUNT_TOKEN_IDENTIFIER: ''
 #   QIOT_ACCOUNT_TOKEN: ''
 #   RABBITMQ_PASSWORD_MESSAGES_CHANNEL: 'messages'  
-
-# development:
-#   QIOT_IO_API_TOKEN: ''
-#   GOOGLE_MAPS_API_KEY: ''
-#   RABBITMQ_HOST: 'mqtt.flespi.io'
-#   RABBITMQ_PORT: '1883'
-#   RABBITMQ_USER: 'LwPT1Kg3H6egbaUCM60vwR0OqCcFxeC9yfSpOYilVlrUj9lW3bhoQ626w2AU42Ts'
-#   RABBITMQ_PASSWORD: ''
-#   QIOT_USER_SERVICE_URL: ''
-#   QIOT_ACCOUNT_TOKEN_IDENTIFIER: ''
-#   QIOT_ACCOUNT_TOKEN: ''
-#   RABBITMQ_PASSWORD_MESSAGES_CHANNEL: 'messages_mqtt' 
 
 production:
   RACK_ENV: 'production'
