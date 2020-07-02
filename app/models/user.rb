@@ -185,4 +185,9 @@ class User < ActiveRecord::Base
        self.confirmation_token = SecureRandom.urlsafe_base64.to_s
     end
   end
+
+  protected
+    def password_required?
+      confirmed? ? super : false
+    end
 end
