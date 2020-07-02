@@ -12,6 +12,12 @@ development:
   RABBITMQ_PORT: '5672'
   RABBITMQ_USER: 'admin'
   RABBITMQ_PASSWORD: 'admin'
+
+  # RABBITMQ_HOST: 'mqtt.flespi.io'
+  # RABBITMQ_PORT: '443'
+  # RABBITMQ_USER: 'FlespiToken 0ZE9K9PRY0VyYlY8rVJmMAntGCtrgo46bx4LwJtiAcHmnvkCeTMOkZ7Opp5vD0qC'
+  # RABBITMQ_PASSWORD: ''
+
   QIOT_USER_SERVICE_URL: 'http://localhost:3001'
   QIOT_ACCOUNT_TOKEN_IDENTIFIER: ''
   QIOT_ACCOUNT_TOKEN: ''
@@ -30,6 +36,7 @@ development:
   # SMTP_PASSWORD: '83gMY1GyDFLk9HA5' 
   # SMTP_PORT: '587' 
   # SMTP_USERNAME: 'randy@gotrack.com'
+  # 9360655444 Kalimuthu
 
   
 # development:

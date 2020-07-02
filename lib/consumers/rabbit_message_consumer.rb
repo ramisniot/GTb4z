@@ -1,4 +1,5 @@
 require 'bunny'
+# require 'mqtt'
 
 class MessageConsumer
 
@@ -14,6 +15,29 @@ class MessageConsumer
 
     @connection = Bunny.new(ENV['CLOUDAMQP_URL'] || @config)
     @connection.start
+    # @connection = MQTT::Client.new(ENV['CLOUDAMQP_URL'] || @config)
+    # @connection = MQTT::Client.connect(
+    #               :host => 'test.mosquitto.org',
+    #               :port => 8883,
+    #               :ssl => true)
+    # @connection.connect()
+
+# -----------------------------------------
+# # Publish example
+# MQTT::Client.connect('test.mosquitto.org') do |c|
+#   c.publish('test', 'message')
+# end
+
+# # Subscribe example
+# MQTT::Client.connect('test.mosquitto.org') do |c|
+#   # If you pass a block to the get method, then it will loop
+#   c.get('test') do |topic,message|
+#     puts "#{topic}: #{message}"
+#   end
+# end
+
+# # ---------------------------------
+
 
     @channel = @connection.create_channel
     @exchange = @channel.direct(RABBITMQ_PASSWORD_MESSAGES_CHANNEL)

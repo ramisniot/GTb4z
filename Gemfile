@@ -5,6 +5,7 @@ ruby '2.3.7'
 gem 'bitmask_attributes'
 gem "browser"
 gem 'bunny', '>= 2.7.0'
+gem 'mqtt', :git => 'https://github.com/njh/ruby-mqtt.git'
 gem 'daemons'
 gem 'devise'
 gem 'devise-encryptable'
