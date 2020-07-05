@@ -1,6 +1,5 @@
 GoTrack::Application.routes.draw do
-  devise_for :user
-
+  devise_for :user, controllers: { confirmations: "confirmations" }
   root to: 'home#index'
 
   get '/login', to: 'home#index'

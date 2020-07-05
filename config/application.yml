@@ -21,7 +21,6 @@ development:
   RABBITMQ_PASSWORD_MESSAGES_CHANNEL: 'messages_rami'
 
 
-
   
 # development:
 #   QIOT_IO_API_TOKEN: ''

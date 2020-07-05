@@ -1,10 +1,8 @@
 class UsersController < ApplicationController
-  before_filter :authorize, except: [:confirm_email]
-  before_filter :authorize_user, except: [:index, :new, :create, :confirm_email]
+  before_filter :authorize
+  before_filter :authorize_user, except: [:index, :new, :create]
   before_filter :authorize_user_creation, only: [:new, :create]
-  # before_filter :authorize, only: [:authorize_user_with_email]
-  # before_filter :authorize_user_with_email, except: [:index, :new, :create, :confirm_email]
-
+  
   def index
     @users = current_account.users
   end
@@ -24,8 +22,8 @@ class UsersController < ApplicationController
     @user.is_admin = 1 if params[:is_admin]
 
     # Check that passwords match
-    if params[:user][:password] == params[:user][:password_confirmation] and not params[:user][:password].blank?
-      @user.password = params[:user][:password]
+    # if params[:user][:password] == params[:user][:password_confirmation] and not params[:user][:password].blank?
+    #   @user.password = params[:user][:password]
       if @user.save
         flash[:success] = @user.email + ' was created successfully and an email for verifying the user has been sent.'
         redirect_to users_path
@@ -33,10 +31,10 @@ class UsersController < ApplicationController
         flash.now[:error] = @user.errors.to_a.uniq.join('<br />')
         render :new
       end
-    else
-      flash.now[:error] = 'Your new password and confirmation must match'
-      render :new
-    end
+    # else
+    #   flash.now[:error] = 'Your new password and confirmation must match'
+    #   render :new
+    # end
   end
 
   def update
@@ -75,19 +73,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def confirm_email
-    user = User.find_by_confirmation_token(params[:id])
-    if user
-      user.email_activate(params[:id])
-      flash[:alert] = "Welcome to the Sample App! Your email has been confirmed.
-      Please sign in to continue."
-      redirect_to users_path
-    else
-      flash[:error] = "Sorry. User does not exist"
-      redirect_to users_path
-    end
-  end
-
   def current_home_selection
     @current_home_selection ||= build_home_selection(@user.default_home_selection)
   end
@@ -95,32 +80,11 @@ class UsersController < ApplicationController
   private
 
   def authorize_user
-    # p current_account
     user = User.find(params[:id])
-    # if user.authendication_token != nil
-    #   flash[:alert] = "Welcome"
-    # else
-    #   flash[:error] = "Please confirm your email"
-    #   redirect_to "/user/sign_in"
-    # end
-    
     unless user.account == current_account
       redirect_back_or_default "/user/sign_out"
     end
   end
-
-  # def authorize_user_with_email
-  #   user = User.find(params[:id])
-  #   p user
-  #   if user.authendication_token
-  #     flash[:alert] = "Welcome"
-  #   # elsif user.confirmation_token && !user.authendication_token
-  #   #   flash[:error] = "Please confirm your email"
-  #   else
-  #     flash[:error] = "Please confirm your email"
-  #     redirect_to "/user/sign_in"
-  #   end
-  # end
 
   def get_role_from_params
     User::ROLES_BY_PRIVILEGE.detect { |role| role.to_s == params[:user][:role] } if params[:user]
