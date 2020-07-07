@@ -6,8 +6,8 @@ class ConfirmationsController < Devise::ConfirmationsController
       if signed_in?(resource_name)
         signed_in_root_path(resource)
       else
-        user_email = resource.email
-        set_password_path(em: user_email)
+        token = resource.confirmation_token
+        set_password_path(em: token)
       end
     end
 end

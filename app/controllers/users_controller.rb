@@ -82,22 +82,27 @@ class UsersController < ApplicationController
     password =  params[:user][:password]
     password_confirmation =  params[:user][:password_confirmation]
     
-    @user = User.where(email: email).first
-
-    # # Check that passwords match
-    if password.length < 6 # Display errors from model validation
-      flash[:error] = 'Passwords must be between 6 and 30 characters'
+    if User.exists?(email: email)
+      @user = User.where(email: email).first
+      # Check that passwords match
+      if password.length < 6 # Display errors from model validation
+        flash[:error] = 'Passwords must be between 6 and 30 characters'
+        false
+        render :set_password
+      elsif password != password_confirmation and not params[:user][:password].blank?
+         flash[:alert] = 'Your Password and confirmation must match'
+         false 
+         render :set_password
+      else
+        @user.password = password
+        @user.save!
+        flash[:success] = @user.email + ' password is created successfully.'
+        redirect_to users_path   
+      end
+    else
+      flash[:alert] = 'Email not Found. Enter valid one'
       false
       render :set_password
-    elsif password != password_confirmation and not params[:user][:password].blank?
-       flash[:alert] = 'Your Password and confirmation must match'
-       false 
-       render :set_password
-    else
-      @user.password = password
-      @user.save!
-      flash[:success] = @user.email + ' password is created successfully.'
-      redirect_to users_path   
     end
   end
 
