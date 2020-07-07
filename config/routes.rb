@@ -38,6 +38,9 @@ GoTrack::Application.routes.draw do
       get :confirm_email
     end
   end
+  
+  get 'set_password' => 'users#set_password'
+  post 'set_password' => 'users#update_password'
 
   resources :contact do
     collection do

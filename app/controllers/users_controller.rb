@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_filter :authorize
-  before_filter :authorize_user, except: [:index, :new, :create]
+  before_filter :authorize, except: [:set_password, :update_password]
+  before_filter :authorize_user, except: [:index, :new, :create, :set_password, :update_password]
   before_filter :authorize_user_creation, only: [:new, :create]
   
   def index
@@ -70,6 +70,34 @@ class UsersController < ApplicationController
     else
       flash.now[:error] = 'Master user cannot be deleted'
       redirect_to users_path
+    end
+  end
+
+  # Override Devise Set Password  
+  def set_password
+  end
+
+  def update_password
+    email = params[:user][:email]
+    password =  params[:user][:password]
+    password_confirmation =  params[:user][:password_confirmation]
+    
+    @user = User.where(email: email).first
+
+    # # Check that passwords match
+    if password.length < 6 # Display errors from model validation
+      flash[:error] = 'Passwords must be between 6 and 30 characters'
+      false
+      render :set_password
+    elsif password != password_confirmation and not params[:user][:password].blank?
+       flash[:alert] = 'Your Password and confirmation must match'
+       false 
+       render :set_password
+    else
+      @user.password = password
+      @user.save!
+      flash[:success] = @user.email + ' password is created successfully.'
+      redirect_to users_path   
     end
   end
 

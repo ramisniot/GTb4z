@@ -12,9 +12,6 @@ development:
   RABBITMQ_PORT: '5672'
   RABBITMQ_USER: 'admin'
   RABBITMQ_PASSWORD: 'admin'
-
-
-
   QIOT_USER_SERVICE_URL: 'http://localhost:3001'
   QIOT_ACCOUNT_TOKEN_IDENTIFIER: ''
   QIOT_ACCOUNT_TOKEN: ''
